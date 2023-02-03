@@ -19,6 +19,9 @@ const Home = () => {
     const [error, setError] = useState('')
     const [poemLoading, setPoemLoading] = useState(false)
 
+    const inputIsEmpty = !value.replace(' ', '')
+    console.log(inputIsEmpty)
+
     const toast = useToast()
 
     useEffect(() => {
@@ -84,7 +87,7 @@ const Home = () => {
 
     }
 
- 
+
     return (
         <Container py={12} maxW='container.xl'>
             <Title />
@@ -97,8 +100,9 @@ const Home = () => {
             />
             <Center>
                 <Button isLoading={poemLoading} loadingText='This may take a minute'
+                    isDisabled={inputIsEmpty}
                     colorScheme='messenger' fontFamily='Poppins' size='lg'
-                     fontWeight='light'
+                    fontWeight='light'
                     shadow='lg'
                     onClick={generatePoem}
                 >Generate</Button>
