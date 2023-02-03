@@ -1,6 +1,6 @@
 import { Flex, Spacer } from '@chakra-ui/layout'
 import {
-    Box, Center, Container, IconButton,
+    Box, Center, Container, IconButton, Image, Text,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -15,6 +15,7 @@ import React from 'react'
 import { RiQuillPenFill } from 'react-icons/ri'
 import { BsFillMoonFill } from 'react-icons/bs'
 import { HiInformationCircle } from 'react-icons/hi'
+import Logo from '../assets/logo.svg'
 
 const Navbar = () => {
     return (
@@ -22,7 +23,9 @@ const Navbar = () => {
             <Container maxW='container.xl'>
                 <Flex height='100%' width='100%'>
                     <Center p={4} >
-                        <RiQuillPenFill size={48} />
+                        {/* <RiQuillPenFill size={48} /> */}
+                        <Image src={Logo} width='48px' height='48px' />
+                        <Text  ms={4} as='h1' fontFamily='Poppins' fontWeight='bold' fontSize='3xl'>Poemo</Text>
                     </Center>
                     <Spacer />
                     <Center p={4} >
