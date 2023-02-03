@@ -84,8 +84,7 @@ const Home = () => {
 
     }
 
-    console.log(error)
-
+ 
     return (
         <Container py={12} maxW='container.xl'>
             <Title />

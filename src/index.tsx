@@ -5,16 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Root from './layouts/Root';
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeProvider, ColorModeScript } from '@chakra-ui/react'
+import theme from './theme';
 
 const router = createBrowserRouter([
   {
     element: <Root />,
     children: [
-      { 
+      {
         path: '/',
         element: <Home />
-     }
+      }
     ]
   },
 ]);
@@ -24,7 +25,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+
+      <RouterProvider router={router} />
+
+    </ChakraProvider>
   </React.StrictMode>
 );
 
