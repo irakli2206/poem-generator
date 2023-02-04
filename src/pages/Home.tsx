@@ -110,7 +110,7 @@ const Home = () => {
             </Center>
             {poem &&
                 <Center >
-                    <Text as='pre' fontFamily='Quicksand' fontSize='xl' fontWeight='semibold'>{poem}</Text>
+                    <Text as='pre' maxW='100%'  fontFamily='Quicksand' fontSize={{ base: '12px', md: '20px', lg: '24px' }} fontWeight='semibold'>{poem}</Text>
                 </Center>}
 
         </Container>

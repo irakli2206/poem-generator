@@ -31,7 +31,7 @@ const Navbar = () => {
                     <Center p={4} >
                         <Image src={colorMode === 'light' ? Logo : LogoDark} width='48px' height='48px'  />
                         <Text ms={4} as='h1' fontFamily='Poppins' fontWeight='bold' fontSize='3xl'
-                            
+                        display={{base: 'none', sm: 'block'}}
                         >Poemo</Text>
                     </Center>
                     <Spacer />
